@@ -9,7 +9,10 @@ var articleOne =
 { title: 'Article one',
   heading:  'Article one',
   date:'Sep 5,2016',
-  content:`Hello,This is my first article`,
+  content:`Hello,This is the content of my first first article
+  Hello,This is the content of my first article
+  Hello,This is the content of my first article
+  Hello,This is the content of my first article`,
     
     
     

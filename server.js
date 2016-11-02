@@ -27,8 +27,8 @@ var articles={
     'article-three':{title: 'Article three',
   heading:  'Article three',
   date:'Sep 7,2016',
-  content:`Hello,This is the content of my third  article \n
-  Hello,This is the content of my third article \n
+  content:`Hello,This is the content of my third  article <br>
+  Hello,This is the content of my third article <br>
   Hello,This is the content of my third article`
     
     

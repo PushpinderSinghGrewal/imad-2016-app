@@ -20,6 +20,7 @@ var articles={
   heading:  'Article one',
   date:'Sep 6,2016',
   content:`Hello,This is the content of my second first article
+  
   Hello,This is the content of my second article`,
     
     

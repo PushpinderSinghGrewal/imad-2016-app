@@ -17,7 +17,7 @@ var articles={
     
 },
     'article-two': {title: 'Article one',
-  heading:  'Article one',
+  heading:  'Article two',
   date:'Sep 6,2016',
   content:`Hello,This is the content of my second first article
   

@@ -1,6 +1,6 @@
 console.log('Loaded!');
-var element=document.getElementById('main-text');
-element.innerHTML="New value";
+//var element=document.getElementById('main-text');
+//element.innerHTML="New value";
 var myimage=document.getElementById('myimage');
 var marginLeft=0;
 function moveRight(){

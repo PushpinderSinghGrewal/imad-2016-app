@@ -5,7 +5,7 @@ var gyanni=document.getElementById('gyanni');
 var marginLeft=0;
 function moveRight(){
 marginLeft=marginLeft+10;
-gyanni.style.marginLeft=marginLeft+'px';
+myimage.style.marginLeft=marginLeft+'px';
     
     
 }

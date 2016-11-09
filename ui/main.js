@@ -1,18 +1,12 @@
-console.log('Loaded!');
-//var element=document.getElementById('main-text');
-//element.innerHTML="New value";
-var myimage=document.getElementById('myimage');
-var marginLeft=0;
-function moveRight(){
-marginLeft=marginLeft+10;
-myimage.style.marginLeft=marginLeft+'px';
+var button=document.getElementById('counter');
+var counter=0;
+button.onClick=function(){
     
+    //make a request to the counter endpoint
+    //Capture the response and store int in a variable
+    //Render the variable in the correct span
+    counter=counter+1;
+    var span=document.getElementById('count');
+    span.innerHTML=counter.toString();
     
 }
-
-myimage.onclick=function()
-{
-  var interval=setInterval(moveRight,100);
-    
-    
-};

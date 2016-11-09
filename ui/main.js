@@ -1,7 +1,7 @@
 console.log('Loaded!');
 var element=document.getElementById('main-text');
 element.innerHTML="New value";
-var gyanni=document.getElementById('gyanni');
+var myimage=document.getElementById('myimage');
 var marginLeft=0;
 function moveRight(){
 marginLeft=marginLeft+10;

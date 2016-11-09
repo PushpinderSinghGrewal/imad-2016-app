@@ -10,7 +10,7 @@ myimage.style.marginLeft=marginLeft+'px';
     
 }
 
-gyanni.onclick=function()
+myimage.onclick=function()
 {
   var interval=setInterval(moveRight,100);
     

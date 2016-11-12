@@ -2,7 +2,36 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var crypto = require('crypto');
+var pool = new Pool(config);
+var config = {
+  host: 'db.imad.hasura-app.io',
+  user: 'pushpindersinghgrewal',
+  password:process.env.DB_PASSWORD, 
+  database: 'pushpindersinghgrewal',
+  port:5432
+    
+};
+app.get('/test-db', function (req, res) {
+    pool.query('Select * from test',function(err,result){
+       if(err)
+       {
+           res.status(500).send(err.toString());
+       }
+       else{
+           res.send(JSON.stringify(result));
+       }
+    });
+  
+});
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/ui/pinder.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pinder.jpg'));
+});
+
+
+/*var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
@@ -233,7 +262,7 @@ app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
 
-
+*/
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);

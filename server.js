@@ -2,47 +2,6 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var pool = new Pool(config);
-/*var config = {
-  host: 'db.imad.hasura-app.io',
-  user: 'pushpindersinghgrewal',
-  password:process.env.DB_PASSWORD, 
-  database: 'pushpindersinghgrewal',
-  port:5432
-    
-};
-app.get('/test-db', function (req, res) {
-    pool.query('Select * from test',function(err,result){
-       if(err)
-       {
-           res.status(500).send(err.toString());
-       }
-       else{
-           res.send(JSON.stringify(result));
-       }
-    });
-  
-});
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-app.get('/ui/pinder.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pinder.jpg'));
-});
-
-*/
-app.get('/test-db', function (req, res) {
-    pool.query('Select * from test',function(err,result){
-       if(err)
-       {
-           res.status(500).send(err.toString());
-       }
-       else{
-           res.send(JSON.stringify(result));
-       }
-    });
-  
-});
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
@@ -111,9 +70,7 @@ function createTemplate (data) {
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/ui/pinder.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pinder.jpg'));
-});
+
 
 function hash (input, salt) {
     // How do we create a hash?
@@ -243,7 +200,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!');
+                                res.status(200).send('Comment inserted!')
                             }
                         });
                 }
